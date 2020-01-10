@@ -1,3 +1,4 @@
+<!-- Display the countdown timer in an element -->
 <head>
   <script src="https://cdn.optimizely.com/js/10641000341.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Courier+Prime|Orbitron|Press+Start+2P&display=swap" rel="stylesheet">
@@ -22,30 +23,55 @@
     var milli =  distance - Math.floor(distance / 100) * 100;
 
     // Display the result in the element with id="demo"
-    document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s " + milli + " mm";
+    document.getElementById("countdown").innerHTML = minutes + "m " + seconds + "s " + milli + " mm";
 
     // If the count down is finished, write some text
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById("demo").innerHTML = "EXPIRED";
+      document.getElementById("countdown").innerHTML = "EXPIRED";
     }
   }, 85);
   </script>
 
   <style>
-    #demo{
+    #countdown{
 
       color:red;
       font-family: 'Courier Prime', monospace;
       /*font-family: 'Orbitron', sans-serif;*/
       /*font-family: 'Press Start 2P', cursive;*/
       font-size: 40px;
+      top:300px;
+      left:365px;
+      position:absolute;
+      z-index:3;
 
+    }
+
+    #bomb{
+
+      clip: rect(auto, auto, 600px, auto);
+      position:absolute;
+      z-index:1;
+    }
+
+    #square{
+      background-color:black;
+      position:absolute;
+      height:150px;
+      width:340px;
+      z-index:2;
+      top:285px;
+      left:350px;
     }
 
   </style>
 </head>
 
   <body>
-    <p id="demo"></p>
+    <img id="bomb"src="https://cdn1.vectorstock.com/i/1000x1000/46/80/tnt-time-bomb-timebomb-with-clock-vector-26754680.jpg" alt="">
+    <div id="square">
+
+    </div>
+    <p id="countdown"></p>
   </body>
