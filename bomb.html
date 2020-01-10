@@ -48,7 +48,7 @@
 
     }
 
-    #bomb{
+    #pic{
 
       clip: rect(auto, auto, 600px, auto);
       position:absolute;
@@ -64,14 +64,27 @@
       top:285px;
       left:350px;
     }
+    #bomb{
+      height: 700px;
+      width: 100%;
+      background-color: white;
+      z-index: 1;
+      position: absolute;
+
+    }
 
   </style>
 </head>
 
   <body>
-    <img id="bomb"src="https://cdn1.vectorstock.com/i/1000x1000/46/80/tnt-time-bomb-timebomb-with-clock-vector-26754680.jpg" alt="">
-    <div id="square">
+    <div id="bomb">
+      <img id="pic"src="https://cdn1.vectorstock.com/i/1000x1000/46/80/tnt-time-bomb-timebomb-with-clock-vector-26754680.jpg" alt="">
+      <div id="square">
 
+      </div>
+      <p id="countdown"></p>
     </div>
-    <p id="countdown"></p>
+    <div style="position:absolute;height:1000;width:1800;">
+      <img src="https://res.cloudinary.com/dy8i0qezub/image/upload/f_auto/jobs/carousel_10_min.jpg" alt="">
+    </div>
   </body>
